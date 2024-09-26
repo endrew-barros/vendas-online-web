@@ -6,11 +6,12 @@ import { BoxInput, TitleInput } from './input.styles'
 //criação de tipagem e extender componentes pre-definidos do Antd
 interface InputProps extends InputPropsAntD {
   title?: string
+  margin?: string
 }
 
-const Input = ({ title, ...props }: InputProps) => {
+const Input = ({ title, margin, ...props }: InputProps) => {
   return (
-    <BoxInput>
+    <BoxInput style={{margin}}>
       <TitleInput>{title}</TitleInput>
       <InputAntD {...props}></InputAntD>
     </BoxInput>
